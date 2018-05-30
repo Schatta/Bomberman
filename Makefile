@@ -1,6 +1,6 @@
 CC	=	gcc
 NAME	= bomberman
-LIBS = -lczmq
+LIBS =
 SRC	=	$(wildcard *.c)
 OBJ	=	$(SRC:%.c=%.o)
 RM	=	rm -f
