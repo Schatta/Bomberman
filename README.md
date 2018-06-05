@@ -17,3 +17,17 @@ une fenêtre devrais apparaitre , en touchant les flèches de votre clavier la b
 
 NB : il n'y a pas les flags -W -Wall et -Werror dans le makefile car il considère que la variable ecran n'est pas utilisé,
 or elle est primordiale pour le bon fonctionnement du test.
+
+EDIT:
+Si pendant le make vous avez des problèmes au niveau du sdl_image (principalement, mais je pense que sdl tout court ça marche aussi)
+>sudo apt-get install libsdl1.2-dev
+
+S'il y a une erreur avec la ligne du dessus c'est sans doute avec cette ligne que ça va marcher :
+>sudo apt-get install libexempi3:i386
+
+refaites la première commande
+>sudo apt-get update
+>sudo apt-get install libsdl-image1.2-dev
+>sudo apt-get upgrade
+
+Voilà.
