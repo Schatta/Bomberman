@@ -1,4 +1,4 @@
 #include "structs.h"
 
 extern t_input  input;
- extern t_map   map;
+extern t_map   map;

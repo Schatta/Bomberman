@@ -22,7 +22,7 @@ void loadGame(void)
 {
   map.background = loadImage("background.png");
   map.tileSet = loadImage("tileset.png");
-  loadMap("map1.txt");
+  loadMap("map.txt");
 }
 
 
