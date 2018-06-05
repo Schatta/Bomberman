@@ -1,32 +1,72 @@
 #include "draw.h"
 
+void drawImage(SDL_Surface *image, int x, int y)
+{
+  SDL_Rect dest;
+  dest.x = x;
+  dest.y = y;
+  dest.w = image->w;
+  dest.h = image->h;
+  SDL_BlitSurface(image, NULL, jeu.screen, &dest);
+}
+
 
 void draw(void)
 {
-
+  drawImage(map.background, 0, 0);
   SDL_Flip(jeu.screen);
   SDL_Delay(1);
 
 }
 
-
-
-void delay(unsigned int frameLimit)
+SDL_Surface *loadImage(char *name)
 {
-  unsigned int ticks = SDL_GetTicks();
 
-  if (frameLimit < ticks)
+  SDL_Surface *temp = IMG_Load(name);
+  SDL_Surface *image;
+
+  if (temp == NULL)
   {
-    return;
+    printf("Failed to load image %s\n", name);
+
+    return NULL;
   }
 
-  if (frameLimit > ticks + 16)
-  {
-    SDL_Delay(16);
+  SDL_SetColorKey(temp, (SDL_SRCCOLORKEY | SDL_RLEACCEL), SDL_MapRGB(temp->format,
+    TRANS_R, TRANS_G,    TRANS_B));
+
+    image = SDL_DisplayFormat(temp);
+
+    SDL_FreeSurface(temp);
+
+    if (image == NULL)
+    {
+      printf("Failed to convert image %s to native format\n", name);
+
+      return NULL;
+    }
+
+    return image;
+
+
   }
 
-  else
+  void delay(unsigned int frameLimit)
   {
-    SDL_Delay(frameLimit - ticks);
+    unsigned int ticks = SDL_GetTicks();
+
+    if (frameLimit < ticks)
+    {
+      return;
+    }
+
+    if (frameLimit > ticks + 16)
+    {
+      SDL_Delay(16);
+    }
+
+    else
+    {
+      SDL_Delay(frameLimit - ticks);
+    }
   }
-}

@@ -4,6 +4,7 @@ int main(int  argc, char *argv[]){
   unsigned int frameLimit = SDL_GetTicks()+16;
   int go;
   init("MainMap");
+  loadGame();
   atexit(cleanup);
 
   go = 1;
