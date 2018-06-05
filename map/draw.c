@@ -1,5 +1,27 @@
 #include "draw.h"
 
+void drawTile(SDL_Surface *image, int destx, int desty, int srcx, int srcy)
+{
+  SDL_Rect dest;
+
+  dest.x = destx;
+  dest.y = desty;
+  dest.w = TILE_SIZE;
+  dest.h = TILE_SIZE;
+
+  SDL_Rect src;
+
+  src.x = srcx;
+  src.y = srcy;
+  src.w = TILE_SIZE;
+  src.h = TILE_SIZE;
+
+  SDL_BlitSurface(image, &src, jeu.screen, &dest);
+
+}
+
+
+
 void drawImage(SDL_Surface *image, int x, int y)
 {
   SDL_Rect dest;
@@ -14,6 +36,7 @@ void drawImage(SDL_Surface *image, int x, int y)
 void draw(void)
 {
   drawImage(map.background, 0, 0);
+  drawMap();
   SDL_Flip(jeu.screen);
   SDL_Delay(1);
 

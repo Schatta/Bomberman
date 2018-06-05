@@ -21,6 +21,8 @@ void init(char  *title){
 void loadGame(void)
 {
   map.background = loadImage("background.png");
+  map.tileSet = loadImage("tileset.png");
+  loadMap("map.txt");
 }
 
 
@@ -29,5 +31,11 @@ void cleanup(){
   {
     SDL_FreeSurface(map.background);
   }
+
+  if (map.tileSet != NULL)
+  {
+    SDL_FreeSurface(map.tileSet);
+  }
+
   SDL_Quit();
 }

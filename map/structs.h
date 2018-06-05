@@ -19,4 +19,10 @@ struct s_gestion{
 
 struct s_map{
   SDL_Surface *background;
+  SDL_Surface *tileSet;
+  int         startX;
+  int         startY;
+  int         maxX;
+  int         maxY;
+  int         tile[MAX_MAP_Y][MAX_MAP_X];
 };
