@@ -27,7 +27,9 @@ S'il y a une erreur avec la ligne du dessus c'est sans doute avec cette ligne qu
 
 refaites la première commande
 >sudo apt-get update
+
 >sudo apt-get install libsdl-image1.2-dev
+
 >sudo apt-get upgrade
 
 Voilà.
