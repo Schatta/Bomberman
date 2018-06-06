@@ -4,6 +4,7 @@ int main(int  argc, char *argv[]){
   unsigned int frameLimit = SDL_GetTicks()+16;
   int go;
   init("MainMap");
+  initializePlayer();
   loadGame();
   atexit(cleanup);
 
@@ -12,7 +13,7 @@ int main(int  argc, char *argv[]){
   while(go==1){
     getInput();
     //fonction update pour scroll
-    //update();
+    update();
     draw();
     delay(frameLimit);
     frameLimit = SDL_GetTicks()+16;

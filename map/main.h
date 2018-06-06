@@ -7,8 +7,10 @@ extern void draw(void);
 extern void delay(unsigned int frameLimit);
 extern void loadGame(void);
 //fonction update pour scroll
-//extern void update(void);
+extern void update(void);
+extern void initializePlayer(void);
 
 t_input   input;
 t_gestion jeu;
 t_map     map;
+t_hero    player;

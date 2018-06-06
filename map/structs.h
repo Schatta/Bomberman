@@ -3,6 +3,7 @@
 typedef struct s_input    t_input;
 typedef struct s_gestion  t_gestion;
 typedef struct s_map      t_map;
+typedef struct s_hero     t_hero;
 
 struct s_input{
   int left;
@@ -25,4 +26,12 @@ struct s_map{
   int         maxX;
   int         maxY;
   int         tile[MAX_MAP_Y][MAX_MAP_X];
+};
+
+struct s_hero{
+  SDL_Surface *sprite;
+  int         x;
+  int         y;
+  int         frameNumber;
+  int         frameTimer;
 };

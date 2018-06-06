@@ -37,6 +37,8 @@ void draw(void)
 {
   drawImage(map.background, 0, 0);
   drawMap();
+  drawanimatedplayer();
+
   SDL_Flip(jeu.screen);
   SDL_Delay(1);
 

@@ -1,7 +1,7 @@
 #include "input.h"
 
 //fonction update pour scroll
-/*void update(void)
+void update(void)
 {
 
   if (input.left == 1)
@@ -44,7 +44,7 @@
     }
   }
 
-}*/
+}
 
 void getInput()
 {

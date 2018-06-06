@@ -54,7 +54,7 @@ void drawMap(void)
 {
   int x, y, mapX, x1, x2, mapY, y1, y2, xsource, ysource, a;
 
-  /* Ces calculs compliqués serviront à calculer l'affichage de l'écran pendant le scrolling
+  /* Ces calculs compliqués serviront à calculer l'affichage de l'écran pendant le scrolling*/
 
   mapX = map.startX / TILE_SIZE;
   x1 = (map.startX % TILE_SIZE) * -1;
@@ -62,7 +62,7 @@ void drawMap(void)
 
   mapY = map.startY / TILE_SIZE;
   y1 = (map.startY % TILE_SIZE) * -1;
-  y2 = y1 + SCREEN_HEIGHT + (y1 == 0 ? 0 : TILE_SIZE); */
+  y2 = y1 + SCREEN_HEIGHT + (y1 == 0 ? 0 : TILE_SIZE); 
 
 
   mapX = 0;

@@ -1,6 +1,7 @@
 #include "structs.h"
 
 extern void drawMap(void);
+extern void drawanimatedplayer(void);
 
 
 extern t_gestion  jeu;

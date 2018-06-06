@@ -17,3 +17,8 @@
 #define MAX_MAP_Y 300
 
 #define TILE_SIZE 32
+
+#define PLAYER_WIDTH 40
+#define PLAYER_HEIGTH 80
+
+#define TIME_BETWEEN_2_FRAMES 8
