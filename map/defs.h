@@ -22,3 +22,10 @@
 #define PLAYER_HEIGTH 80
 
 #define TIME_BETWEEN_2_FRAMES 8
+
+#define PLAYER_SPEED 4
+#define WALK 1
+#define IDLE 2
+#define JUMP 3
+#define RIGHT 1
+#define LEFT 2

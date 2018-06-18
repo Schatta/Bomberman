@@ -13,7 +13,8 @@ int main(int  argc, char *argv[]){
   while(go==1){
     getInput();
     //fonction update pour scroll
-    update();
+    updatePlayer();
+
     draw();
     delay(frameLimit);
     frameLimit = SDL_GetTicks()+16;

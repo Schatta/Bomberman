@@ -5,6 +5,10 @@ void initializePlayer(void)
 {
 
   player.sprite = loadImage("walkright.png");
+  player.direction = RIGHT;
+  player.etat = WALK;
+  player.frameNumber = 0;
+  player.frameTimer = TIME_BETWEEN_2_FRAMES;
 
   player.x = 20;
   player.y = 304;
@@ -30,3 +34,67 @@ void drawplayer()
   SDL_BlitSurface(player.sprite, &src, jeu.screen, &dest);
 
 }
+
+void updatePlayer(void)
+{
+
+     if (input.left == 1)
+    {
+        player.x -= PLAYER_SPEED;
+
+        if (player.x < 0)
+        {
+            player.x = 0;
+        }
+        if(player.direction == RIGHT)
+        {
+            player.direction = LEFT;
+            player.sprite = loadImage("walkleft.png");
+        }
+    }
+
+
+    else if (input.right == 1)
+    {
+        player.x += PLAYER_SPEED;
+
+        if (player.x + PLAYER_WIDTH >= map.maxX)
+        {
+            player.x = map.maxX - PLAYER_WIDTH;;
+        }
+        if(player.direction == LEFT)
+        {
+            player.direction =  RIGHT;
+            player.sprite = loadImage("walkright.png");
+        }
+    }
+    centerScrollingOnPlayer();
+
+}
+
+void centerScrollingOnPlayer(void)
+ {
+    map.startX = player.x - (SCREEN_WIDTH / 2);
+
+    if (map.startX < 0)
+    {
+        map.startX = 0;
+    }
+
+    else if (map.startX + SCREEN_WIDTH >= map.maxX)
+    {
+        map.startX = map.maxX - SCREEN_WIDTH;
+    }
+
+    map.startY = player.y - (SCREEN_HEIGHT / 2);
+
+    if (map.startY < 0)
+    {
+        map.startY = 0;
+    }
+
+    else if (map.startY + SCREEN_HEIGHT >= map.maxY)
+    {
+        map.startY = map.maxY - SCREEN_HEIGHT;
+    }
+ }
