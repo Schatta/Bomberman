@@ -35,7 +35,7 @@ void drawImage(SDL_Surface *image, int x, int y)
 
 void draw(void)
 {
-  drawImage(map.background, 0, 0);
+  //drawImage(map.background, 0, 0);
   drawMap();
   drawanimatedplayer();
 

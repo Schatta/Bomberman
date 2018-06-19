@@ -20,9 +20,9 @@ void init(char  *title){
 
 void loadGame(void)
 {
-  map.background = loadImage("background.png");
-  map.tileSet = loadImage("tileset.png");
-  loadMap("map1.txt");
+  //map.background = loadImage("background.png");
+  map.tileSet = loadImage("bombermanTileSet.jpeg");
+  loadMap("mapBomberman.txt");
 }
 
 

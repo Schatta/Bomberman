@@ -36,4 +36,8 @@ struct s_hero{
   int         frameTimer;
   int         etat;
   int         direction;
+  int         w;
+  int         h;
+  float       dirX;
+  float       dirY;
 };

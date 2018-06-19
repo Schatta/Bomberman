@@ -7,3 +7,4 @@ extern t_map    map;
 
 extern SDL_Surface *loadImage(char *name);
 extern void centerScrollingOnPlayer(void);
+extern void mapCollision(t_hero *entity);
