@@ -71,6 +71,39 @@ void updatePlayer(void)
       player.sprite = loadImage("walkright.png");
     }
   }
+
+else if (input.up == 1)
+  {
+    player.y -= PLAYER_SPEED;
+
+    if (player.y < 0)
+    {
+      player.y = 0;
+    }
+    if(player.direction == LEFT)
+    {
+      player.direction =  RIGHT;
+      player.sprite = loadImage("walkright.png");
+    }
+  }
+
+
+
+else if (input.down == 1)
+  {
+    player.y += PLAYER_SPEED;
+
+    if (player.y + PLAYER_WIDTH > map.maxY)
+    {
+      player.y = map.maxY - PLAYER_WIDTH*2;
+    }
+    if(player.direction == LEFT)
+    {
+      player.direction =  RIGHT;
+      player.sprite = loadImage("walkright.png");
+    }
+  }
+
   mapCollision(&player);
   centerScrollingOnPlayer();
 
