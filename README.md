@@ -4,6 +4,9 @@ Installation SDL
 
 > sudo apt-get install libsdl1.2-dev libsdl-image1.2-dev libsdl1.2debian libsdl2-dev libsdl-ttf2.0-dev
 
+> sudo apt-get install libsdl2-image-2.0-0
+> sudo apt-get install libsdl2-image-dev
+
 NB : Nous utiliserons la version 1.2 de SDl pour l'instant, n'ayant pas trouvé de "tuto"
 suffisament conséquent pour démarrer rapidement.
 
